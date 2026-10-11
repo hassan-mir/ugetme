@@ -10,7 +10,7 @@ from ugetme import handy
 SETTINGS = {"settings": {
     "post_process_enabled": False, "post_process_provider_id": "openai",
     "post_process_providers": [
-        {"id": "openai", "base_url": "https://api.openai.com/v1", "allow_base_url_edit": False},
+        {"id": "openai", "base_url": "https://api.example.com/v1", "allow_base_url_edit": False},
         {"id": "custom", "base_url": "http://localhost:11434/v1", "allow_base_url_edit": True, "label": "Custom",
          "models_endpoint": "/models", "supports_structured_output": False}],
     "post_process_models": {"custom": ""}, "post_process_api_keys": {"custom": ""},

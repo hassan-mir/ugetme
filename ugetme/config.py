@@ -57,7 +57,8 @@ def is_wsl() -> bool:
 
 
 def service_url(port: int, path: str = "") -> str:
-    return f"http://{HOST}:{port}{path}"
+    """The address of the user's own local service (always 127.0.0.1, the same host as HOST)."""
+    return f"http://127.0.0.1:{port}{path}"
 
 
 def home() -> Path:

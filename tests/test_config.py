@@ -88,3 +88,6 @@ class ConfigTest(TempHomeTest):
         self.assertEqual(config.load()["trusted_logins"], ["/a"])
         config.write_json(self.home / "config.json", {"trusted_logins": "/a"})
         self.assertEqual(config.load()["trusted_logins"], [])
+
+    def test_the_service_url_uses_the_bind_host(self):
+        self.assertEqual(config.service_url(7337, "/v1"), f"http://{config.HOST}:7337/v1")
