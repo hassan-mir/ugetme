@@ -1,0 +1,17 @@
+{
+  "name": "ugetme",
+  "owner": {
+    "name": "ugetme contributors"
+  },
+  "plugins": [
+    {
+      "name": "ugetme",
+      "source": "./",
+      "description": "Cleans dictated text before it is sent, with your own Claude login and your context.",
+      "version": "0.4.0"
+    }
+  ],
+  "metadata": {
+    "description": "ugetme: cleans dictated text before it is sent, with your own Claude login and your context."
+  }
+}

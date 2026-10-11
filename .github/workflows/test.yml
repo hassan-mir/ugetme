@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:   # Unix only: the tests use Unix permissions, signals and a script engine
+        include:
+          - {os: ubuntu-latest, python: "3.9"}    # the oldest supported Python
+          - {os: ubuntu-latest, python: "3.12"}
+          - {os: macos-latest, python: "3.10"}    # macos-latest is Apple Silicon, where Python 3.9 builds are not reliably available
+          - {os: macos-latest, python: "3.12"}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run the tests
+        run: python -m unittest discover -s tests -v

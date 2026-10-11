@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ugetme"
+version = "0.4.0"
+description = "A small local service that cleans dictated text with your own Claude login and your context."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "ugetme contributors"}]
+keywords = ["dictation", "speech-to-text", "voice", "prompt", "handy", "claude-code", "cleanup"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Text Processing",
+]
+
+[project.scripts]
+ugetme = "ugetme.cli:main"
+
+[tool.setuptools]
+packages = ["ugetme"]

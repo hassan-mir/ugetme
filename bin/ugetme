@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Run ugetme from a checkout or the Claude Code plugin folder, without an install."""
+import os
+import sys
+
+if sys.version_info < (3, 9):
+    sys.stderr.write("ugetme needs Python 3.9 or later\n")
+    sys.exit(1)  # the plugin hook then tries its "python" fallback
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+
+from ugetme.cli import main  # noqa: E402
+
+sys.exit(main())

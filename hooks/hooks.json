@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ugetme hook session-start || python3 \"${CLAUDE_PLUGIN_ROOT}/bin/ugetme\" hook session-start || python \"${CLAUDE_PLUGIN_ROOT}/bin/ugetme\" hook session-start || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ugetme hook prompt || python3 \"${CLAUDE_PLUGIN_ROOT}/bin/ugetme\" hook prompt || python \"${CLAUDE_PLUGIN_ROOT}/bin/ugetme\" hook prompt || true",
+            "timeout": 150
+          }
+        ]
+      }
+    ]
+  }
+}
