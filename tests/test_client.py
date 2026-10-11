@@ -38,7 +38,8 @@ class ClientStartTest(TempHomeTest):
         os.environ["UGETME_HOME"] = str(home)
         self.set_config(port=free_port())
         self.assertEqual(stat.S_IMODE(os.stat(home).st_mode), 0o700)
-        self.assertTrue(client.ensure_running(wait_s=10))
+        log = home / "serve.log"
+        self.assertTrue(client.ensure_running(wait_s=10), log.read_text() if log.exists() else "no serve.log")
         pid = client.health()["pid"]
         self.addCleanup(_kill, pid)
         self.assertNotEqual(pid, os.getpid())

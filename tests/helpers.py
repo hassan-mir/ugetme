@@ -48,7 +48,7 @@ class TempHomeTest(unittest.TestCase):
     def setUp(self):
         self._tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self._tmp.cleanup)
-        self.home = Path(self._tmp.name)
+        self.home = Path(self._tmp.name).resolve()   # macOS: /var is a link to /private/var, and ugetme saves resolved paths
         self.handy_file = self.home / "handy" / "settings_store.json"
         stdin_patch = mock.patch("sys.stdin", io.StringIO(""))  # a question must never wait for a key
         stdin_patch.start()

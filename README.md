@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="docs/media/ugetme-launch.mp4">Video</a> ·
+  <a href="https://github.com/user-attachments/assets/f547ec48-c683-4a37-b5e2-17be2f60f013">Video</a> ·
   <a href="#quick-start">Install</a> ·
   <a href="https://paypal.me/infernoswif">Donate</a> ·
   <a href="#features">Features</a> ·
@@ -27,15 +27,7 @@
 - **Runs as a small service on your computer and cleans with the Claude Code account you already have.** No new subscription and no API key.
 - **Free and open source** (MIT). The cleaning uses your own Claude Code plan. It can also use an OpenAI API key, or a local model with Ollama.
 
-<p align="center">
-  <a href="docs/media/ugetme-launch.mp4"><img src="docs/media/ugetme-demo.gif" alt="ugetme types what you meant. A dictated email is cleaned and formatted, and a typed Claude Code prompt ending in &lt;&lt; is checked: typos fixed, turned into a list, then y + Enter sends it" width="800"></a>
-  <br><sub>What you say, and what your app gets. <a href="docs/media/ugetme-launch.mp4">Watch the 87-second video, with sound.</a></sub>
-</p>
-
-
 https://github.com/user-attachments/assets/f547ec48-c683-4a37-b5e2-17be2f60f013
-
-
 
 ## Why I built this
 
