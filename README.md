@@ -270,7 +270,7 @@ A project can add its own words in `.claude/ugetme.md`. The [guide](docs/guide.m
 
 ## Privacy and your Claude plan
 
-ugetme sends your text only to your engine: your installed Claude Code, or the model you configured. It keeps its files in `~/.ugetme`, readable only by you: your settings, your word list, and a log of recent cleanups that you can turn off. With the Claude engine, your Claude plan's terms and usage limits apply. See [SECURITY.md](SECURITY.md) to report a problem.
+ugetme sends your text only to your engine: your installed Claude Code, or the model you configured. It keeps its files in `~/.ugetme`, readable only by you: your settings, your word list, and a log of recent cleanups that you can turn off. With the Claude engine, your Claude plan's terms and usage limits apply. [PRIVACY.md](PRIVACY.md) lists exactly what ugetme reads, sends and stores. See [SECURITY.md](SECURITY.md) to report a problem.
 
 ## What's next
 
