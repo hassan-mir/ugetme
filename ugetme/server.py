@@ -5,6 +5,7 @@ import json
 import os
 import re
 import socket
+import socketserver
 import sys
 import threading
 import time
@@ -230,7 +231,9 @@ class _Server(ThreadingHTTPServer):
     def server_bind(self):
         if sys.platform == "win32" and hasattr(socket, "SO_EXCLUSIVEADDRUSE"):
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
-        super().server_bind()
+        # HTTPServer.server_bind also runs socket.getfqdn(), a reverse DNS lookup that can hang for seconds (seen on macOS)
+        socketserver.TCPServer.server_bind(self)
+        self.server_name, self.server_port = self.server_address[:2]
 
 
 def make_server(cfg: dict, port: Optional[int] = None):

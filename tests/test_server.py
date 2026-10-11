@@ -200,3 +200,11 @@ class ServerTestCase(ServerTest):
     def test_second_server_on_the_same_port_fails(self):
         with self.assertRaises(server.PortInUse):
             server.make_server(self.cfg)
+
+
+class ServerStartTest(ServerTest):
+    def test_start_does_not_look_up_the_host_name(self):
+        # http.server does a reverse DNS lookup (socket.getfqdn) at start; it can hang for seconds (seen on macOS)
+        with mock.patch("socket.getfqdn", side_effect=AssertionError("no DNS lookup at start")):
+            httpd, _ = server.make_server(server.config.load(), port=0)
+        httpd.server_close()
