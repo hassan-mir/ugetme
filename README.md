@@ -32,6 +32,11 @@
   <br><sub>What you say, and what your app gets. <a href="docs/media/ugetme-launch.mp4">Watch the 87-second video, with sound.</a></sub>
 </p>
 
+
+https://github.com/user-attachments/assets/f547ec48-c683-4a37-b5e2-17be2f60f013
+
+
+
 ## Why I built this
 
 I used Wispr Flow and loved the AI cleanup, but I did not want to pay for one more subscription. I switched to [Handy](https://github.com/cjpais/Handy), a free, open-source dictation app that is excellent at transcription. Its own AI step is experimental and needs an API key or a local model, and it does not see my word list or what I am working on.
