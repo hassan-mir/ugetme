@@ -2,7 +2,7 @@
 name: ugetme
 description: 'Runs the ugetme CLI (the local service that cleans dictated text). This skill should be used for /ugetme (status, setup, mode, config, review, test, learn, keep, forget, style, tidy, scan, clean, trust, untrust, ensure, stop, restart, handy, autostart), when the user asks ugetme to learn or keep a word, and when ugetme check context says "run the ugetme skill with: learn ..." or "keep ...".'
 argument-hint: "[status | setup | mode [auto|check|manual] | config [key [value]] | review | test | clean <text> | ensure | stop | restart | learn <heard> <meant> | keep <word> | forget <term> | style <note> | tidy | scan | trust <folder> | untrust <folder> | handy status|undo|setup | autostart on|off | or teach a word: nimbis means Nimbus]"
-allowed-tools: Bash(ugetme *), Bash(python3 *bin/ugetme*), Bash(python *bin/ugetme*)
+allowed-tools: Bash(ugetme status:*), Bash(ugetme review:*), Bash(ugetme test:*), Bash(ugetme clean:*), Bash(ugetme learn:*), Bash(ugetme keep:*), Bash(ugetme forget:*), Bash(ugetme style:*), Bash(ugetme tidy:*), Bash(ugetme scan:*), Bash(ugetme config:*), Bash(ugetme mode:*), Bash(ugetme ensure:*), Bash(ugetme stop:*), Bash(ugetme restart:*), Bash(ugetme untrust:*), Bash(ugetme handy status:*), Bash(ugetme autostart status:*)
 ---
 
 # ugetme

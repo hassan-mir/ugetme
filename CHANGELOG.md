@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1
+
+- The service starts without a reverse DNS lookup, which could hang for seconds on macOS.
+- Cleanups start `claude` without MCP servers: about 3 seconds, with no slow spikes.
+- A message with a greeting and a sign-off gets them on their own lines; its separate points become bullets.
+- The `/ugetme` skill pre-approves only everyday ugetme commands; Claude Code asks before setup, trust, Handy changes and autostart changes.
+- A plugin icon. INSTALL.md installs uv with a package manager instead of a download-and-run script.
+
 ## 0.4.0
 
 First public version.

@@ -4,8 +4,10 @@ You are setting up [ugetme](https://github.com/hassan-mir/ugetme) for the user. 
 
 1. Find the operating system (macOS, Linux, Windows or WSL) and tell the user.
 2. If `uv` is missing, ask the user, then install it (it brings its own Python):
-   - macOS, Linux, WSL: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-   - Windows: `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+   - macOS with Homebrew: `brew install uv`
+   - Windows or WSL: `winget install --id=astral-sh.uv -e` (from WSL, uv must then be installed inside WSL too: use the next line)
+   - Linux or WSL with pipx: `pipx install uv`
+   - Otherwise: give the user the official install page, https://docs.astral.sh/uv/getting-started/installation/, and wait until they say uv is installed.
 
    If `uv` is then not found, call it as `~/.local/bin/uv` (Windows: `%USERPROFILE%\.local\bin\uv.exe`).
 3. Run `uv tool install git+https://github.com/hassan-mir/ugetme`. If `ugetme --version` then fails, run `uv tool update-shell`, call ugetme by its full path (uv's tool bin folder, usually `~/.local/bin/ugetme`) in the next steps, and tell the user at the end to open a new terminal.
